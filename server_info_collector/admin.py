@@ -1,0 +1,9 @@
+# from djangoautoconf.auto_conf_admin_tools.foreign_key_auto_complete import ForeignKeyAutoCompleteFeature
+from djangoautoconf.auto_conf_admin_tools.reversion_feature import ReversionFeature
+from djangoautoconf.auto_conf_admin_tools.admin_register import AdminRegister
+import models
+
+
+managed_item_admin_register = AdminRegister()
+managed_item_admin_register.add_feature(ReversionFeature())
+managed_item_admin_register.register_all_models(models)
