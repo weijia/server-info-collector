@@ -17,6 +17,7 @@ class NetworkElement(models.Model):
     cpu_info = models.CharField(max_length=255, null=True, blank=True)
     hard_disk_size_in_m = models.IntegerField(null=True, blank=True)
     other_info = models.CharField(max_length=255, null=True, blank=True)
+    created = models.DateTimeField(auto_now_add=True, null=True, blank=True)
 
     def __unicode__(self):
         return self.identifier
